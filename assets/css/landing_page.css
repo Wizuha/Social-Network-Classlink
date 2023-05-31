@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "new-hero", sans-serif;
+}
+
+main 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.logo
+{
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    width: 212px;
+    height: 54px;
+    z-index: 100;
+}
+.logo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.button-container
+{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    gap: 30px;
+    height: 54px;
+    width: 346px;
+    z-index: 100;
+}
+
+.button-container .connexion, .button-container .inscription
+{
+    height: 100%;
+    width: 157px;
+
+}
+
+.button-container .connexion button
+{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-color: #4F4789;
+    border: #4F4789 2px solid;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+.button-container .connexion button:hover{
+    color: #4F4789;
+    background-color: #FFFFFF;
+    border-color: #4F4789;
+}
+
+.button-container .connexion button:active{
+    color: #FFFFFF;
+    background-color: rgba(79, 71, 137, 0.8);
+    border-color: rgit gba(79, 71, 137, 0.8);
+
+
+}
+.button-container .inscription button
+{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: #4F4789 2px solid;
+    color: #4F4789;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.button-container .inscription button:hover
+{
+    background-color: #4F4789;
+    color: #FFFFFF;
+    border: 2px #4F4789 solid;
+}
+
+.button-container .inscription button:active
+{
+    color: #FFFFFF;
+    background-color: rgba(79, 71, 137, 0.8);
+    border: 2px solid rgba(79, 71, 137, 0.8);
+}
+
+.content
+{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    top: 422px;
+    left: 168px;
+    height: 179px;
+    width: 582px;
+}
+
+.text{
+    width: 582px;
+    height: 92px;
+}
+
+.text p 
+{
+    color: black;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    margin-top: -120px;
+}
+
+.text p span
+{
+    color: #4F4789;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+}
+
+.joinus
+{
+    position: absolute;
+    width: 207px;
+    height: 54px;
+    z-index: 10;
+}
+
+.joinus button{
+    width: 207px;
+    height: 100%;
+    background-color: #FF784F;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  24px;
+    color: #FFFFFF;
+    border-radius: 6px;
+    border: 2px solid #FF784F;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.joinus button:hover{
+    background-color: #FFFFFF ;
+    border: 2px solid #FF784F ;
+    color: #FF784F ;
+}
+
+
+.joinus button:active{
+    background-color: rgba(255, 120, 79, 0.8);
+    border-color: rgba(255, 120, 79, 0.8);
+    color: #FFFFFF ;
+}
+
+
+.planet
+{
+    position: absolute;
+    left: 60%;
+    top: 180px;
+    width: 489px;
+    height: 472px;
+    z-index: 10;
+}
+
+.planet img
+{
+    height: 80%;
+}
+
+.stars
+{
+    margin-top: 20px;
+    height: 30%;
+    position: fixed;
+}
+
+
+.blue
+{
+    position: fixed;
+    left: -200px;
+    top: 80px;
+    width: 691px;
+    height: 1499px;
+    background-color: #4F4789;
+    rotate: 128deg;
+}
+
+.orange
+{
+    position: fixed;
+    top: -350px;
+    left: 85%;
+    width: 384px;
+    height: 874px;
+    background-color: #FF784F;
+    rotate: 128deg;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1100px) {
+    body {
+        overflow: hidden;
+    }
+
+    .planet {
+        display: none;
+    }
+
+    .stars {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+
+    body {
+        margin: 100px;
+        overflow: hidden;
+    }
+
+    .joinus {
+        display: none;
+    }
+
+    .logo {
+        margin-left: -80px;
+        width: 200px;
+    }
+
+    .stars {
+        display: none;
+    }
+
+    p {
+        position: fixed;
+        margin-right: 100px;
+        text-align: center;
+    }
+
+    .text p {
+        margin-top: -200px;
+        text-align: start;
+    }
+
+    .blue {
+        left: -300px;
+    }
+
+    @media only screen and (max-width: 692px) {
+        .button-container {
+            margin: auto;
+            margin-top: 100px;
+        }
+    }
+}

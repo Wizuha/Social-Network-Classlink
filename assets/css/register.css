@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url("https://use.typekit.net/zfb0hmm.css");
+
+body { 
+    background-color: #4F4789;
+    color: #FFF;
+    overflow: hidden;
+}
+
+a {
+    color: #FFF;
+}
+
+.logo {
+    position: fixed;
+    top: 30px;
+    left: 180px;
+}
+
+.page-title {
+    color: #FFF;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 44px;
+}
+
+.white-block {
+    width: 600px;
+    height: 1440px;
+    background-color: #FFF;
+    transform: rotate(15deg);
+    position: fixed;
+    left: -267px;
+    top: -120px;
+    z-index: -1;
+
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-block{
+    align-self: center;
+}
+
+.security-form-block {
+    align-self: center;
+}
+
+.full-name {
+    display: flex;
+    column-gap: 28px;
+}
+
+.paragraph {
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.input {
+    width: 260px;
+    height: 50px;
+    margin-bottom: 16px;
+    border-style: none;
+    border-bottom-style: solid;
+    background-color: #4F4789;
+    color: #FFF;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.security-input {
+    width: 520px;
+    height: 50px;
+    margin-bottom: 16px;
+    border-style: none;
+    border-bottom-style: solid;
+    background-color: #4F4789;
+    color: #FFF;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: #FFF;
+    opacity: 0.6;
+}
+
+.button {
+    width: 120px;
+    height: 50px;
+    background-color: #FF784F;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+    margin: 16px 0 16px 0;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #FFF;
+    color: #FF784F;
+    border: solid 2px #FF784F;
+}
+
+.moon-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 95px;
+}
+
+#moon {
+    width: 586px;
+}
+
+.hidden {
+    display: none;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.birth-date-gender {
+    display: flex;
+    column-gap: 30px;
+}
+
+.password {
+    display: flex;
+    column-gap: 28px;
+}
+
+#mail {
+    width: 551px;
+}

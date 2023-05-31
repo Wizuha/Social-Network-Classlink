@@ -1,0 +1,487 @@
+@import url("https://use.typekit.net/zfb0hmm.css");
+
+* {
+    font-family: "new-hero", sans-serif;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template: 50px 100px 170px 150px 80px / 350px 1fr 300px;
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    gap: 20px;
+}
+
+.header {
+    background-color: #4F4789;
+    grid-area: 1 / 1 / 1 / 4;
+}
+
+img {
+    height: 30px;
+    margin-top: 7px;
+}
+
+.logo {
+    margin-left: 90px;
+}
+
+.input-box {
+    position: relative;
+    float: right;
+    right: 59%;
+    margin-top: 10px;
+    height: 30px;
+    max-width: 10px;
+    width: 50%;
+    border-radius: 7px;
+    background-color: #fff;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+}
+
+.input-box.open {
+    max-width: 200px;
+}
+
+.input-box input {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input-box.open input {
+    padding: 0 15px 0 40px
+}
+
+.input-box .search {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    background-color: #4F4789;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search .search-icon {
+    font-size: 30px;
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.input-box .close-icon {
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;  
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 10;
+}
+
+.input-box.open .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) rotate(180deg);
+    z-index: 10;
+}
+
+.dropdown {
+    z-index: 10;
+	display: none;
+	background: #fff;
+	position: absolute;
+	width: 200px;
+	top: 47px;
+
+    margin-left: 250px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05), 
+				0 0 2px rgba(0, 0, 0, 0.05),
+				0 0 3px rgba(0, 0, 0, 0.05),
+				0 0 4px rgba(0, 0, 0, 0.05), 
+				0 0 5px rgba(0, 0, 0, 0.05), 
+				0 0 4px rgba(0, 0, 0, 0.05), 
+				0 0 5px rgba(0, 0, 0, 0.05)
+}
+.dropdown li {
+	list-style: none;
+	text-align: left;
+}
+.dropdown li a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: #000000;
+	font-size: 16px;
+	font-weight: 500;
+}
+.dropdown li a:hover {
+	background: #eee;
+}
+
+
+.messages-icon {
+    position: absolute;
+    right: 80px;
+    margin-top: 3px;
+}
+
+.notifications {
+    position: absolute;
+    right: 160px;
+    margin-top: 3px;
+}
+
+
+.profile-icon-header, .tv-icon {
+    position: relative;
+    padding: 40px;
+    left: 30%;
+}
+
+.profil {
+    grid-area: 2 / 1 / 4 / 1;
+    background-color: white;
+    margin-left: 90px;
+    border-radius: 7px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.profile-head {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 20px;
+}
+
+h3 {
+    margin-top: -10px;
+}
+
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 0.3;
+}
+
+.profile-infos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-infos > p {
+    display: flex;
+    font-size: 15px;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 100;
+}
+
+span {
+    font-weight: 200;
+    padding-left: 5px;
+}
+
+
+.profile-button {
+    position: relative;
+    height: 30px;
+    background-color: #4F4789;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-left: 95px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.profile-button:hover {
+    background-color: white;
+    border: solid 2px #4F4789;
+    color: #4F4789;
+}
+
+.informations {
+    grid-area: 4 / 1 / 5 / 1;
+    background-color: white;
+    margin-left: 90px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.informations > p {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.disconnect {
+    grid-area: 5 / 1 / 6 / 1;
+    background-color: white;
+    margin-left: 90px;
+    margin-bottom: 40px;
+    border: solid 2px #FF784F;
+    border-radius: 7px;
+    color: #FF784F;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.disconnect:hover {
+    background-color: #FF784F;
+    color: white;
+}
+
+.create-post {
+    grid-area: 2 / 2 / 2 / 3;
+    background-color: white;
+    border-radius: 7px;
+}
+
+
+
+.post-button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 16px;
+    color: rgb(134, 134, 134);
+}
+
+.create-post > img {
+    position: absolute;
+}
+
+.suggestions {
+    grid-area: 2 / 3 / 7 / 4;
+    background-color: white;
+    margin-right: 90px;
+    border-radius: 7px;
+    margin-bottom: 50px;
+}
+
+.suggestions-title {
+    margin-top: 15px;
+    margin-left: 20px;
+    color: #4F4789;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.quick-add {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: solid 2px #4F4789;
+    color: #4F4789;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quick-add:hover {
+    background-color: #4F4789;
+    color: white;
+}
+
+.suggestion-line {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pages-title {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.pages-container {
+    display: grid;
+    width: 80%;
+    height: 180px;
+    grid-template: 1fr 30px 1fr / 1fr 1fr;
+    column-gap: 15px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.item1 {
+    grid-area: 1 / 1 / 1 / 1;
+    z-index: 100;
+}
+
+.item1 img , .item2 img , .item3 img, .item4 img
+{
+    width: 100%;
+    height: 100%;
+}
+.item2 {
+    grid-area: 1 / 2 / 1 / 2;
+}
+.item3 {
+    grid-area: 3 / 1 / 3 / 1;
+}
+.item4 {
+    grid-area: 3 / 2 / 3 / 2;
+}
+
+
+.post-name {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 80px;
+}
+
+#more{
+    display: none;
+}
+
+.post-description {
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-right: 15px;
+    text-align: start;
+    float: left;
+}
+
+
+.timeline {
+    grid-area: 3 / 2 / 8 / 2;
+    background-color: white;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.post-image {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.read-more {
+    margin-top: 15px;
+    color: rgb(174, 174, 174);
+    cursor: pointer;
+    margin-right: 20px; 
+    float: right;
+}
+
+.nb-likes {
+    float: left;
+    margin-left: 20px;
+
+}
+
+.nb-comments {
+    float: right;
+    margin-right: 20px;
+}
+
+.like {
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    float: left;
+    border: none;
+    font-size: 16px;
+    border-right: solid 1px rgb(189, 189, 189);
+    border-top: solid 1px rgb(188, 188, 188);
+    background-color: rgb(255, 255, 255);
+}
+
+.comment {
+    cursor: pointer;
+    width: 50%;
+    height: 40px;
+    float: right;
+    border: none;
+    font-size: 16px;
+    border-top: solid 1px rgb(190, 190, 190);
+    background-color: rgb(255, 255, 255);
+}
+
+.like-icon {
+    height: 25px;
+}
+
+.comment-icon {
+    height: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.post-profile-pic {
+    width: 40px;
+    height: 40px;
+    margin-top: 27px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.div-post-image
+{
+    width: 100%;
+    height: 300px;
+}
+
+
+.post-image {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

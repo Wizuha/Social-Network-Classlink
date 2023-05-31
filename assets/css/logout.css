@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url("https://use.typekit.net/zfb0hmm.css");
+
+body {
+    overflow: hidden;
+}
+
+a {
+    color: #FFF;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.logo {
+    position: fixed;
+    top: 30px;
+    left: 180px;
+}
+
+.thanks {
+    position: fixed;
+    top: 330px;
+    left: 180px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+}
+
+.purple-block {
+    width: 600px;
+    height: 2000px;
+    background-color: #4F4789;
+    position: fixed;
+    left: 1380px;
+    bottom: -250px;
+    transform: rotate(20deg);
+}
+
+.planet-stars {
+    position: fixed;
+    top: 150px;
+    right: 0px;
+}
+
+.thanks-msg {
+    display: flex;
+    flex-direction: column;
+    font-family: "new-hero", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 36px;
+}
+
+.redirection {
+    font-family: "new-hero", sans-serif;
+    font-weight: 300;
+    font-style: light;
+    font-size: 24px;
+}
+
+.site-name {
+    color: #4F4789;
+}
